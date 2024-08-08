@@ -1,13 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 :root {
+    /* --bg-color-header: #a9b2d471;
     --bg-color: #F3F5FC;
+    --bg-color-footer: #F3F5FC; */
+
+    --bg-color-header: #CDE8E5;
+    --bg-color: #EEF7FF;
+    --bg-color-footer: #4D869C;
 
     --color-white: white;
 
     --text-color1: #343A40;
     --text-color2: #495057;
     --text-color3: #0A3871;
+
+    --text-color4: #518383;
     
     /* might not be necessary due to figma inconsistency */
     --fill-color: #D8DFE8;
@@ -20,37 +28,119 @@
     padding: 0;
 }
 
+header, body, footer {
+    background-color: var(--bg-color);
+    font-family: var(--primary-font);
+    color: var(--text-color4);
+}
+
+._container__content_1_text_field {
+    resize: none;
+    transition-timing-function: ease-in-out;
+}
+
+._container__content_1_text_field:focus {
+    outline: none !important;
+    border:1px solid red;
+    box-shadow: 0 0 10px #719ECE;
+    transition: ease 0.2s;
+}
+
 ._header {
-    padding: 0% 0% 0% 0%;
+    padding: 2% 0% 0% 2%;
+    /* display: flex;
+    background-color: var(--bg-color);
+    background-color: var(--bg-color-header) !important; */
 }
 
 ._container {
-    padding: 5% 15%;
-    gap: 82px;
+    padding: 0% 2% 0% 10%;
+    gap: 5%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 
-._container__content_left {
-    width: 50%;
+._container__content_1 {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 40px;
-
+    justify-content: center;
+    gap: 16px;
 }
 
-._container__content_left__buttons_and_rule{
+._container__content_1_text_field {
+    margin-bottom: 60px;
+    margin-left: 50px;
+    margin-top: 0px;
+    font-size: 32px;
+    font-weight: 400px;
+    color: var(--text-color3);
+    background-color: var(--bg-color);
+    border: none;
+    max-width: 100%;
+    padding: 3%;
+    border-radius: 32px;
+}
+::placeholder {
+    color: var(--text-color3);
+}
+
+._container__content_1__information {
+    display: flex;
+    justify-content:flex-start;
+}
+
+._container__content_1__rule_text {
     width: 50%;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 40px;
+    align-items: center;
+    gap: 5px;
 }
 
-._container__content_right {
+._container__content_1__buttons {
+    display: flex;
+}
+
+._container__content_2 {
     width: 30%;
     display: flex;
     flex-direction: column;
     width: 50%;
+}
+
+._container__content_2__text_field {
+    padding: 3%;
+    margin: 0px 30px 60px;
+    font-size: 32px;
+    font-weight: 400px;
+    color: var(--text-color3);
+    background-color: white;
+    border: none;
+    max-width: 100%;
+    border-radius: 32px;
+    background-image: url(/assets/bg-personagem.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    justify-content: center;
+}
+
+._container__content_2__text_field:focus {
+    outline: none !important;
+    border:1px solid red;
+    box-shadow: 0 0 10px #719ECE;
+    /* transition: ease 0.2s; */
+    transition: ease-in-out 0.2s;
+}
+
+._container__content_2__text_field::placeholder{
+    font-size: 24px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+._container__content2__information {
+
 }

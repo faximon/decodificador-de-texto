@@ -1,40 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/style.css">
-    <title>Document</title>
+    <title>Encriptador de Texto</title>
 </head>
 <body>
     <header class="_header">
-
+            <img src="./assets/Frame 6.svg" alt="Logo Alura"> 
+            <!-- <h1 style="text-align: center;">🔒Criptografe suas mensakgens🔒</h1> -->
     </header>
 
     <main class="_container">
-        <section class="_container__content_left">
-            <img src="" alt="">
-            <input type="text" class="_container__content__input" placeholder="Digite seu texto">
-            <div class="_container__content_left__buttons_and_rule">
-                <div>
-                    <h6 class="_container__content_left__rule_text"><img class="_container__content_left__rule_icon"  src="./assets/bi_exclamation-circle-fill.svg" width="6%">
-                        Apenas letras minúsculas e sem acento.
-                    </h6>
-                    <button class="_container__content_left__button">Criptografar</button>
-                    <button class="_container__content_left__button">Descriptografar</button>
-                </div>
+        <section class="_container__content_1">
+            <textarea class="_container__content_1_text_field" 
+                name="story" 
+                rows="8" 
+                cols="41" 
+                placeholder="Digite seu texto"></textarea>
+
+            <div class="_container__content_1__information">
+                <p class="_container__content_1__rule_text">
+                    <img class="_container__content_1__rule_icon"  
+                    src="./assets/bi_exclamation-circle-fill.svg" 
+                    width="5%">Apenas letras minúsculas e sem acento.
+                </p>
+            </div>
+
+            <div class="_container__content_1__buttons">
+                <button class="_container__content_1__button_encrypt">Criptografar</button>
+                <button class="_container__content_1__button_decrypt">Descriptografar</button>
             </div>
         </section>
 
-        <section class="_container__content_right">
-            <img>
-            <h3>
-                Nenhuma mensagem encontrada
-            </h3>
-            <h5>
-                Digite um texto que você deseja criptografar ou descriptografar
-            </h5>
+        <section class="_container__content_2">
+            <!-- <img src="./assets/bg-personagem.svg" alt="Idk"> -->
+            <textarea class="_container__content_2__text_field" cols="5" rows="20"
+            placeholder="Nenhuma mensagem encontrada!
 
+Digite um texto que você deseja criptografar ou descriptografar"></textarea>
+            <button class="container_content_2_button_copy">Copiar</button>
+            <div class="_container__content2__information">
+                <p>Nenhuma mensagem encontrada</p>
+                <p>Digite um texto que você deseja criptografar ou descriptografar</p>
+            </div>
         </section>
 
     </main>
